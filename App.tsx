@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import AppLoading from 'expo-app-loading';
+import * as ScreenOrientation from 'expo-screen-orientation';
 import {
   useFonts,
   SourceSansPro_200ExtraLight,
@@ -33,6 +34,8 @@ export default function App() {
     SourceSansPro_900Black,
     SourceSansPro_900Black_Italic,
   });
+  // const orientation = ScreenOrientation.getOrientationAsync();
+  // console.log(ScreenOrientation.getOrientationAsync());
   if (!fontsLoaded) {
     return <AppLoading />;
   }
