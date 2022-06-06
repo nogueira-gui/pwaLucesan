@@ -16,7 +16,7 @@ export default function HorizontalItemList({ props }: any) {
   return <View style={{ width: width }}>
     <FlatList
       data={props}
-      keyExtractor={(item) => String(item)}
+      keyExtractor={(item) => `${item.id}`}
       horizontal={true}
       scrollEventThrottle={16}
       snapToAlignment={'start'}

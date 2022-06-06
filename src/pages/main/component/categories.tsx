@@ -8,22 +8,22 @@ export default function Categories({props}:any) {
     const categories = [{
         name:"Peças",
         code:"pecas",
-        image: "pecas",
+        image: require("../../../../assets/icon/pecas.png"),
         size: sizeIcon,
     },{
         name:"Temaki",
         code:"temaki",
-        image: "temaki",
+        image: require("../../../../assets/icon/temaki.png"),
         size: sizeIcon,
     },{
         name:"Yakisoba",
         code:"yakisoba",
-        image: "yakisoba",
+        image: require("../../../../assets/icon/yakisoba.png"),
         size: sizeIcon,
     },{
         name:"Combinados",
         code:"combinado",
-        image: "combinado",
+        image: require("../../../../assets/icon/combinado.png"),
         size: sizeIcon,
     }
 ]

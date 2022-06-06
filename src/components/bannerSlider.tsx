@@ -18,7 +18,7 @@ export default function BannerSlider({ props }: any) {
       id: props[props.length-1].id+1,
       name: "EMPTY",
       category: "EMPTY",
-      image: "",
+      image: null,
       price: 0
     })
     return function cleanup(): void {
@@ -62,7 +62,7 @@ export default function BannerSlider({ props }: any) {
     <FlatList
       data={banners}
       ref={flatList}
-      keyExtractor={(item) => String(item)}
+      keyExtractor={(item) => `${item.id}`}
       horizontal={true}
       scrollEventThrottle={16}
       snapToAlignment={'center'}

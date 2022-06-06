@@ -16,7 +16,7 @@ export default function LogoImage() {
     return <View style={{ width: width }}>
         <Animated.Image
             onLoad={onLoad}
-            source={{ uri: require("../../assets/Logo.png") }}
+            source={ require("../../assets/Logo.png") }
             style={[
                 {
                     opacity: opacity,

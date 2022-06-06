@@ -35,11 +35,14 @@ export default function App() {
     SourceSansPro_900Black_Italic,
   });
   // const orientation = ScreenOrientation.getOrientationAsync();
-  // console.log(ScreenOrientation.getOrientationAsync());
+  const lockOrientation = async () => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
+  }
   if (!fontsLoaded) {
     return <AppLoading />;
   }
 
+  lockOrientation();
   return (
     <>
       <Main />
