@@ -42,7 +42,7 @@ export default function App() {
     return <AppLoading />;
   }
 
-  lockOrientation();
+  // lockOrientation();
   return (
     <>
       <Main />

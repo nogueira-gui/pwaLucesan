@@ -3,7 +3,6 @@
     "name": "Luce San",
     "slug": "luceSan",
     "version": "1.0.0",
-    "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -32,7 +31,8 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "display": "standalone"
     },
     "description": ""
   }
