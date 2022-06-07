@@ -13,14 +13,14 @@ export default function BannerSlider({ props }: any) {
   React.useEffect(() => {
     _stopAutoPlay();
     _startAutoPlay();
-    
+    /*
     banners.push({
       id: props[props.length-1].id+1,
       name: "EMPTY",
       category: "EMPTY",
       image: null,
       price: 0
-    })
+    })*/
     return function cleanup(): void {
       _stopAutoPlay();
     }
@@ -36,7 +36,7 @@ export default function BannerSlider({ props }: any) {
   }
 
   const _goToNextPage = () => {
-    if (CurrentSlide >= props.length - 1) CurrentSlide = 0;
+    if (CurrentSlide >= props.length - 1) CurrentSlide = -1;
 
     flatList.current.scrollToIndex({
       index: ++CurrentSlide,
@@ -67,7 +67,7 @@ export default function BannerSlider({ props }: any) {
       scrollEventThrottle={16}
       snapToAlignment={'center'}
       decelerationRate={'fast'}
-      pagingEnabled
+      //pagingEnabled
       showsHorizontalScrollIndicator={false}
       renderItem={({ item, index })=><Animated.Image
         onLoad={onLoad}
