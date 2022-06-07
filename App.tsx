@@ -34,7 +34,6 @@ export default function App() {
     SourceSansPro_900Black,
     SourceSansPro_900Black_Italic,
   });
-  // const orientation = ScreenOrientation.getOrientationAsync();
   const lockOrientation = async () => {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
   }
@@ -42,7 +41,7 @@ export default function App() {
     return <AppLoading />;
   }
 
-  // lockOrientation();
+  ScreenOrientation.addOrientationChangeListener(r => console.log(r))
   return (
     <>
       <Main />

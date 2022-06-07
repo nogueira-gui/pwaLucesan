@@ -32,8 +32,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "display": "standalone",
-      "orientation": "portrait"
+      "display": "standalone"
     },
     "description": ""
   }
