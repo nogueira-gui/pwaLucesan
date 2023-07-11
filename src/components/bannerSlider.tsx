@@ -3,24 +3,17 @@ import { View, Animated, Dimensions, FlatList, StyleSheet } from 'react-native';
 
 let CurrentSlide: number = 0;
 let IntervalTime: number = 4000;
-let _timerId: number = 0;
+let _timerId: number|NodeJS.Timer = 0;
 export default function BannerSlider({ props }: any) {
   let [opacity, setOpacity] = React.useState(new Animated.Value(0));
  
   let width = Dimensions.get('window').width;
-  const flatList = React.useRef(null);
+  const flatList : any = React.useRef(null);
   let banners = props;
   React.useEffect(() => {
     _stopAutoPlay();
     _startAutoPlay();
-    /*
-    banners.push({
-      id: props[props.length-1].id+1,
-      name: "EMPTY",
-      category: "EMPTY",
-      image: null,
-      price: 0
-    })*/
+
     return function cleanup(): void {
       _stopAutoPlay();
     }
