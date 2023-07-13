@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, ScrollView } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import WhatsappButton from '../../components/whatsappButton';
 import BannerSlider from '../../components/bannerSlider';
@@ -78,25 +77,29 @@ export default function Main() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <LogoImage />
-        <SearchInput />
-        <Text style={{
-          fontSize: 20,
-          fontFamily: 'SourceSansPro_600SemiBold',
-          textAlign: 'left',
-          paddingLeft:20,
-          marginTop:10
-        }}>Destaques</Text>
-        <BannerSlider props={dataBanner}></BannerSlider>
-        <Categories/>
-        <Text style={{
-          fontSize: 20,
-          fontFamily: 'SourceSansPro_600SemiBold',
-          textAlign: 'left',
-          paddingLeft:20,
-          marginTop:25,
-        }}>Os mais pedidos</Text>
-        <HorizontalItemList props={data} />
+        <ScrollView>
+          <LogoImage />
+          <SearchInput />
+          <Text style={{
+            fontSize: 20,
+            fontFamily: 'SourceSansPro_600SemiBold',
+            textAlign: 'left',
+            paddingLeft: 20,
+            marginTop: 10
+          }}>Destaques</Text>
+          <BannerSlider props={dataBanner}></BannerSlider>
+          <Categories />
+          <Text style={styles.subtitle}>Os mais pedidos</Text>
+          <HorizontalItemList props={data} />
+          <Text style={styles.subtitle}>Peças</Text>
+          <GridItem props={data} />
+          <Text style={styles.subtitle}>Temaki</Text>
+          <GridItem props={data} />
+          <Text style={styles.subtitle}>Yakisoba</Text>
+          <GridItem props={data} />
+          <Text style={styles.subtitle}>Combinados</Text>
+          <GridItem props={data} />
+        </ScrollView>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -109,4 +112,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // justifyContent: 'center',
   },
+  subtitle: {
+    fontSize: 20,
+    fontFamily: 'SourceSansPro_600SemiBold',
+    textAlign: 'left',
+    paddingLeft: 20,
+    marginTop: 25,
+  }
 });
