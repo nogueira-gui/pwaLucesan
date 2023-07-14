@@ -28,7 +28,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.ninjadexter.luceSan"
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -42,6 +43,11 @@
           "initialOrientation": "PORTRAIT"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e2681254-fb2f-4cf8-8d8a-b32f9d21b57b"
+      }
+    }
   }
 }
